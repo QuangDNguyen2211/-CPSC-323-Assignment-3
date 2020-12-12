@@ -1,0 +1,8 @@
+int num1;
+if num1 > num2
+then
+	large = num1$;
+else
+	large = num2$;
+endif
+

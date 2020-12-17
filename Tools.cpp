@@ -6,7 +6,7 @@
 
 	Professor: Anthony Le
 
-	Assignment 1: Lexical Analyzer
+	Assignment 3: Lexical Analyzer
 */
 
 #include "Tools.h"

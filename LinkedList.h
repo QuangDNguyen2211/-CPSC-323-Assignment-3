@@ -3,7 +3,7 @@
 			 Quang Nguyen
 	Course: CPSC 323 - 04
 	Professor: Anthony Le
-	Assignment 2: Syntax Analyzer
+	Assignment 3: Syntax Analyzer
 */
 
 // Implement the class named "Node"

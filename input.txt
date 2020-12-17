@@ -1,8 +1,13 @@
-int num1;
-if num1 > num2
-then
-	large = num1$;
-else
-	large = num2$;
-endif
+! This is the first comment !
+x = a + b;
+z = c + d;
+a = e - f;
+b = g * n;
 
+! This is the second comment !
+bool m = true;
+float n = 3.0;
+
+! This is the third comment !
+if a == 0 then b = c + d * e; else p = c + d * e; endif
+while a >= n do h = h + 1; whileend

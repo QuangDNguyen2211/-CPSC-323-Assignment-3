@@ -3,7 +3,7 @@
 			 Quang Nguyen
 	Course: CPSC 323 - 04
 	Professor: Anthony Le
-	Assignment 2: Syntax Analyzer
+	Assignment 3: Syntax Analyzer
 */
 
 #include <iostream>
@@ -363,38 +363,38 @@ void print(LinkedList<string> data, ofstream& writeFile, string cases, string on
 	if (cases == "assign") {
 		// Display on the screen
 		cout << "   <Statement> -> <Assign>" << endl
-			<< "   <Assign> -> <Identifier> = <Expression>;" << endl;
+			 << "   <Assign> -> <Identifier> = <Expression>;" << endl;
 		// Write into the destination file
 		writeFile << "   <Statement> -> <Assign>" << endl
-			<< "   <Assign> -> <Identifier> = <Expression>;" << endl;
+			      << "   <Assign> -> <Identifier> = <Expression>;" << endl;
 	}
 	else if (cases == "declarative") {
 		// Display on the screen
 		cout << "   <Statement> -> <Declarative>" << endl
-			<< "   <Declarative> -> <Type> <ID>" << endl
-			<< "   <Type> -> int | float | bool" << endl
-			<< "   <ID> -> id" << endl;
+			 << "   <Declarative> -> <Type> <ID>" << endl
+			 << "   <Type> -> int | float | bool" << endl
+			 << "   <ID> -> id" << endl;
 		// Write into the destination file
 		writeFile << "   <Statement> -> <Declarative>" << endl
-			<< "   <Declarative> -> <Type> <ID>" << endl
-			<< "   <Type> -> int | float | bool" << endl
-			<< "   <ID> -> id" << endl;
+			      << "   <Declarative> -> <Type> <ID>" << endl
+			      << "   <Type> -> int | float | bool" << endl
+			      << "   <ID> -> id" << endl;
 	}
 	else if (cases == "if") {
 		// Display on the screen
 		cout << "   <Statement> -> if <Conditional> then <Statement> else <Statement> endif" << endl
-			<< "   <Conditional> -> <Expression> <Relop> <Expression>| <Expression>" << endl;
+			 << "   <Conditional> -> <Expression> <Relop> <Expression> | <Expression>" << endl;
 		// Write into the destination file
 		writeFile << "   <Statement> -> if <Conditional> then <Statement> else <Statement> endif" << endl
-			<< "   <Conditional> -> <Expression> <Relop> <Expression>| <Expression>" << endl;
+			      << "   <Conditional> -> <Expression> <Relop> <Expression> | <Expression>" << endl;
 	}
 	else if (cases == "while") {
 		// Display on the screen
 		cout << "   <Statement> -> while <Conditional> do <Statement> whileend" << endl
-			<< "   <Conditional> -> <Expression> <Relop> <Expression>| <Expression>" << endl;
+			 << "   <Conditional> -> <Expression> <Relop> <Expression> | <Expression>" << endl;
 		// Write into the destination file
 		writeFile << "   <Statement> -> while <Conditional> do <Statement> whileend" << endl
-			<< "   <Conditional> -> <Expression> <Relop> <Expression>| <Expression>" << endl;
+			      << "   <Conditional> -> <Expression> <Relop> <Expression> | <Expression>" << endl;
 	}
 	else if (cases == "id") {
 		// Display on the screen
@@ -411,10 +411,10 @@ void print(LinkedList<string> data, ofstream& writeFile, string cases, string on
 	else if (cases == "expression prime") {
 		// Display on the screen
 		cout << "   <TermPrime> -> Epsilon" << endl
-			<< "   <ExpressionPrime> -> " << data.showLexeme() << " <Term> <ExpressionPrime>" << endl;
+			 << "   <ExpressionPrime> -> " << data.showLexeme() << " <Term> <ExpressionPrime>" << endl;
 		// Write into the destination file
 		writeFile << "   <TermPrime> -> Epsilon" << endl
-			<< "   <ExpressionPrime> -> " << data.showLexeme() << " <Term> <ExpressionPrime>" << endl;
+			      << "   <ExpressionPrime> -> " << data.showLexeme() << " <Term> <ExpressionPrime>" << endl;
 	}
 	else if (cases == "term prime") {
 		// Display on the screen
@@ -425,44 +425,44 @@ void print(LinkedList<string> data, ofstream& writeFile, string cases, string on
 	else if (cases == "identifier") {
 		// Display on the screen
 		cout << "   <Term> -> <Factor> <TermPrime>" << endl
-			<< "   <Factor> -> <ID> | <Num> | <BoolType>" << endl
-			<< "   <ID> -> id" << endl;
+			 << "   <Factor> -> ( <Expression> ) | <ID> | <Num> | <BoolType>" << endl
+			 << "   <ID> -> id" << endl;
 		// Write into the destination file
 		writeFile << "   <Term> -> <Factor> <TermPrime>" << endl
-			<< "   <Factor> -> <ID> | <Num> | <BoolType>" << endl
-			<< "   <ID> -> id" << endl;
+			      << "   <Factor> -> ( <Expression> ) | <ID> | <Num> | <BoolType>" << endl
+			      << "   <ID> -> id" << endl;
 	}
 	else if (cases == "num") {
 		// Display on the screen
 		cout << "   <Term> -> <Factor> <TermPrime>" << endl
-			<< "   <Factor> -> <ID> | <Num> | <BoolType>" << endl
-			<< "   <Num> -> int | float" << endl
-			<< "   <BoolType> -> true | false" << endl;
+			 << "   <Factor> -> ( <Expression> ) | <ID> | <Num> | <BoolType>" << endl
+			 << "   <Num> -> int | float" << endl
+			 << "   <BoolType> -> true | false" << endl;
 		// Write into the destination file
 		writeFile << "   <Term> -> <Factor> <TermPrime>" << endl
-			<< "   <Factor> -> <ID> | <Num> | <BoolType>" << endl
-			<< "   <Num> -> int | float" << endl
-			<< "   <BoolType> -> true | false" << endl;
+			      << "   <Factor> -> ( <Expression> ) | <ID> | <Num> | <BoolType>" << endl
+			      << "   <Num> -> int | float" << endl
+			      << "   <BoolType> -> true | false" << endl;
 	}
 	else if (cases == "bool") {
 		// Display on the screen
 		cout << "   <Term> -> <Factor> <TermPrime>" << endl
-			<< "   <Factor> -> <ID> | <Num> | <BoolType>" << endl
-			<< "   <Num> -> int | float" << endl
-			<< "   <BoolType> -> true | false" << endl;
+			 << "   <Factor> -> ( <Expression> ) | <ID> | <Num> | <BoolType>" << endl
+			 << "   <Num> -> int | float" << endl
+			 << "   <BoolType> -> true | false" << endl;
 		// Write into the destination file
 		writeFile << "   <Term> -> <Factor> <TermPrime>" << endl
-			<< "   <Factor> -> <ID> | <Num> | <BoolType>" << endl
-			<< "   <Num> -> int | float" << endl
-			<< "   <BoolType> -> true | false" << endl;
+			      << "   <Factor> -> ( <Expression> ) | <ID> | <Num> | <BoolType>" << endl
+			      << "   <Num> -> int | float" << endl
+			      << "   <BoolType> -> true | false" << endl;
 	}
 	else if (cases == ";") {
 		// Display on the screen
 		cout << "   <TermPrime> -> Epsilon" << endl
-			<< "   <ExpressionPrime> -> Epsilon" << endl;
+			 << "   <ExpressionPrime> -> Epsilon" << endl;
 		// Write into the destination file
 		writeFile << "   <TermPrime> -> Epsilon" << endl
-			<< "   <ExpressionPrime> -> Epsilon" << endl;
+			      << "   <ExpressionPrime> -> Epsilon" << endl;
 	}
 }
 
